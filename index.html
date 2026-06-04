@@ -200,8 +200,10 @@ nav a:hover{color:var(--gold)}
 }
 
 /* ─── HERO ────────────────────────────────────────────────────── */
-.hero{min-height:88vh;display:flex;align-items:center;padding:0 clamp(1rem,4vw,2.5rem);background:var(--navy);background-image:radial-gradient(ellipse 55% 50% at 72% 38%,rgba(201,168,76,.1) 0%,transparent 55%),radial-gradient(ellipse 30% 35% at 5% 80%,rgba(34,197,94,.05) 0%,transparent 50%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(201,168,76,.018) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(201,168,76,.018) 80px)}
+.hero{min-height:88vh;display:flex;align-items:center;padding:0 clamp(1rem,4vw,2.5rem);background:var(--navy);position:relative;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.55}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(6,20,32,.82) 0%,rgba(6,20,32,.65) 50%,rgba(6,20,32,.78) 100%)}
+.hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 50%,rgba(201,168,76,.08) 0%,transparent 60%)}
 .hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1.2fr 0.8fr;gap:4rem;align-items:center;position:relative;z-index:1;padding-top:2rem}
 .hero-eyebrow{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem;font-weight:500}
 .hero h1{font-family:var(--ff-d);font-size:clamp(2.6rem,4.8vw,4.4rem);font-weight:400;line-height:1.07;color:var(--white);margin-bottom:1.4rem}
@@ -411,7 +413,13 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-inner">
+  <!-- Hintergrundvideo -->
+  <video class="hero-video" autoplay muted loop playsinline preload="auto"
+    poster="hero-berlin-poster.jpg">
+    <source src="hero-berlin.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner" style="position:relative;z-index:2">
     <div>
       <p class="hero-eyebrow">PAN21 Business Angel Netzwerk · Berlin</p>
       <h1>Ihr Business Angel<br>für <em>echtes Wachstum</em></h1>
