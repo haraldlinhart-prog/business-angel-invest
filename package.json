@@ -1,0 +1,7 @@
+{
+  "name": "business-angel-invest",
+  "version": "1.0.0",
+  "description": "business-angel-invest.eu – Business Angels & Privatgeld",
+  "private": true,
+  "engines": { "node": ">=18.x" }
+}
