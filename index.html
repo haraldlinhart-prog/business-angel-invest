@@ -381,6 +381,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 </style>
 </head>
 <body>
+<script>window.__formLoadTs=Date.now();</script>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
@@ -953,7 +954,7 @@ document.getElementById('contactForm').addEventListener('submit',async function(
         investart:document.getElementById('investart').value,
         kapital:document.getElementById('kapital').value,
         vorhaben:document.getElementById('vorhaben').value.trim(),
-        '_hp':''
+        '_hp':'','_ts':String(window.__formLoadTs)
       })
     });
     var d=await r.json();

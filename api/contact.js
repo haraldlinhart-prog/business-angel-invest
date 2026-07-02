@@ -26,6 +26,7 @@ module.exports=async function handler(req,res){
   if(!body||typeof body!=='object')return res.status(400).json({error:'Ungültige Anfrage.'});
   // Honeypot
   if(body['_hp']&&body['_hp'].trim()!=='')return res.status(200).json({ok:true});
+  if(!body['_ts']||(Date.now()-parseInt(body['_ts'],10))<3000)return res.status(200).json({ok:true});
 
   const vorname   =sanitize(body.vorname   ||'');
   const nachname  =sanitize(body.nachname  ||'');
