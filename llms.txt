@@ -1,0 +1,16 @@
+# Business Angel
+
+> Business Angels und private Investoren für Startups und wachsende Unternehmen. Privatgeld, stille Beteiligung, privates Darlehen, Seed-Finanzierung, Wachstumskapital. PAN21 Berlin. Kostenlose Erstberatung: 030-56844500.
+
+Diese Datei richtet sich an KI-Assistenten und Sprachmodelle (llms.txt-Standard) und beschreibt kurz, worum es auf dieser Website geht, damit Inhalte korrekt verstanden und zusammengefasst werden können.
+
+## Themen auf dieser Seite
+- Die richtige Form fürIhr Vorhaben
+- Was Business Angelsleisten
+- Private Investoren mitechtem Unternehmersinn
+- Vom Erstgespräch zurFinanzierung
+- Was Gründer überuns sagen
+- Antworten zu Business Angels& Privatgeld
+
+## Kontakt
+- Website: https://business-angel-invest.eu
