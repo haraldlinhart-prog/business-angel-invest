@@ -33,4 +33,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://business-angel-invest.eu/sitemap.xml
+Sitemap: https://www.business-angel-invest.eu/sitemap.xml
