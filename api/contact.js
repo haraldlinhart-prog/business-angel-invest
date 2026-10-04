@@ -131,7 +131,7 @@ module.exports=async function handler(req,res){
 <strong>PAN21 Business Angel Netzwerk</strong><br>
 <a href="mailto:angel@pan21.com">angel@pan21.com</a><br>
 <a href="tel:03056844500">030-56844500</a><br>
-<a href="https://business-angel-invest.eu">business-angel-invest.eu</a></p>
+<a href="https://www.business-angel-invest.eu/">business-angel-invest.eu</a></p>
 </body></html>`;
 
   try{

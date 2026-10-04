@@ -13,4 +13,4 @@ Diese Datei richtet sich an KI-Assistenten und Sprachmodelle (llms.txt-Standard)
 - Antworten zu Business Angels& Privatgeld
 
 ## Kontakt
-- Website: https://business-angel-invest.eu
+- Website: https://www.business-angel-invest.eu/
