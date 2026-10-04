@@ -126,23 +126,7 @@
 }
 </script>
 
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//counter.ixan.org/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '6']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -168,15 +152,6 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--ff-b);background:var(--navy);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-/* ─── COOKIE BANNER ─────────────────────────────────────────── */
-.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(6,20,32,.98);border-top:1px solid rgba(201,168,76,.2);padding:1rem clamp(1rem,4vw,2.5rem);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.cookie-banner p{font-size:.72rem;color:rgba(255,255,255,.4);line-height:1.6;max-width:680px}
-.cookie-banner a{color:var(--gold)}
-.cookie-btns{display:flex;gap:.7rem;flex-shrink:0}
-.cookie-accept{background:var(--gold);color:var(--navy);border:none;padding:.45rem 1.2rem;font-size:.68rem;font-family:var(--ff-b);font-weight:600;cursor:pointer;transition:background var(--trans)}
-.cookie-accept:hover{background:var(--gold-lt)}
-.cookie-decline{background:transparent;color:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.1);padding:.45rem 1.2rem;font-size:.68rem;font-family:var(--ff-b);cursor:pointer}
 
 /* ─── HEADER ─────────────────────────────────────────────────── */
 header{position:sticky;top:0;z-index:100;background:rgba(6,20,32,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,.12);padding:0 clamp(1rem,4vw,2.5rem)}
@@ -373,7 +348,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 .overlay-body h3{font-family:var(--ff-d);font-size:.95rem;color:var(--gold-lt);margin:1rem 0 .3rem}
 .overlay-body p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:.4rem}
 .overlay-body a{color:var(--gold-lt)}
-.opt-out-btn{margin-top:.7rem;background:transparent;border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:7px 15px;font-size:.7rem;cursor:pointer;font-family:var(--ff-b)}
 
 /* ─── REVEAL ─────────────────────────────────────────────────── */
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -382,15 +356,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 </head>
 <body>
 <script>window.__formLoadTs=Date.now();</script>
-
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p>Diese Website verwendet Matomo Analytics (selbst gehostet, counter.ixan.org, Site ID: 6). Ihre IP wird anonymisiert. Keine Weitergabe an Dritte. <a href="#" onclick="showPrivacy();return false">Datenschutz</a></p>
-  <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Akzeptieren</button>
-    <button class="cookie-decline" onclick="declineCookies()">Ablehnen</button>
-  </div>
-</div>
 
 <!-- HEADER -->
 <header>
@@ -1005,9 +970,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
     <div class="overlay-body">
       <h3>Verantwortlicher</h3>
       <p>PAN21 · business-angel-invest.eu<br>E-Mail: <a href="mailto:angel@pan21.com">angel@pan21.com</a></p>
-      <h3>Matomo Analytics</h3>
-      <p>Diese Website verwendet Matomo (selbst gehostet, counter.ixan.org, Site ID: 6). IP wird anonymisiert. Keine Übermittlung an Dritte. Nur nach Ihrer Einwilligung aktiviert.</p>
-      <button class="opt-out-btn" onclick="matomoOptOut()">Matomo-Tracking deaktivieren</button>
       <h3>Kontaktformular</h3>
       <p>Übermittelte Daten werden zur Bearbeitung gespeichert (Art. 6 Abs. 1 lit. b DSGVO). Keine Weitergabe an Dritte.</p>
       <h3>Ihre Rechte</h3>
@@ -1019,13 +981,9 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 <a href="#top" style="position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:var(--navy);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;text-decoration:none;opacity:.75;transition:opacity .2s;z-index:50" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity='.75'">▲</a>
 
 <script>
-/* Cookie / Matomo */
-function acceptCookies(){localStorage.setItem('bai_consent','accepted');document.getElementById('cookieBanner').style.display='none';if(typeof _paq!=='undefined')_paq.push(['setConsentGiven']);}
-function declineCookies(){localStorage.setItem('bai_consent','declined');document.getElementById('cookieBanner').style.display='none';}
-function matomoOptOut(){if(typeof _paq!=='undefined')_paq.push(['forgetConsentGiven']);localStorage.setItem('bai_consent','declined');alert('Matomo-Tracking deaktiviert.');}
+/* Privacy */
 function showPrivacy(){document.getElementById('privacyOverlay').classList.add('show');}
 function hidePrivacy(){document.getElementById('privacyOverlay').classList.remove('show');}
-(function(){var c=localStorage.getItem('bai_consent');if(c==='accepted'){document.getElementById('cookieBanner').style.display='none';if(typeof _paq!=='undefined')_paq.push(['setConsentGiven']);}else if(c==='declined'){document.getElementById('cookieBanner').style.display='none';}})();
 
 /* Hamburger */
 document.querySelector('.hamburger').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('open');});
@@ -1075,22 +1033,6 @@ document.getElementById('contactForm').addEventListener('submit',async function(
   finally{btn.disabled=false;btn.textContent='Anfrage senden →';}
 });
 </script>
-<!-- Statcounter -->
-<script type="text/javascript">
-var sc_project=11299017; 
-var sc_invisible=1; 
-var sc_security="e81b3221"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/11299017/0/e81b3221/1/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
 
 <!-- DIRECTORIES:START -->
 <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:16px 0;">
