@@ -39,8 +39,11 @@
       "telephone": "+493056844500",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE"
+        "streetAddress": "7533 South Center View CT, STE R",
+        "addressLocality": "West Jordan",
+        "addressRegion": "UT",
+        "postalCode": "84084",
+        "addressCountry": "US"
       },
       "description": "Business Angels und private Investoren für Startups und wachsende Unternehmen. Privatgeld, stille Beteiligung, privates Darlehen, Seed-Finanzierung, Wachstumskapital. PAN21 Berlin.",
       "areaServed": ["DE","EU"],
@@ -338,16 +341,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 .footer-col ul a:hover{color:var(--gold)}
 .footer-bottom{max-width:var(--max);margin:1rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(201,168,76,.06);font-size:.68rem;color:rgba(255,255,255,.16);line-height:1.65}
 @media(max-width:680px){.footer-inner{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
-
-/* ─── PRIVACY OVERLAY ────────────────────────────────────────── */
-.overlay{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.88);align-items:center;justify-content:center;padding:1.5rem}
-.overlay.show{display:flex}
-.overlay-box{background:var(--navy2);border:1px solid rgba(201,168,76,.18);max-width:560px;width:100%;max-height:82vh;overflow-y:auto;padding:2.2rem;position:relative}
-.overlay-close{position:absolute;top:.9rem;right:1.2rem;background:none;border:none;color:rgba(255,255,255,.3);font-size:1.2rem;cursor:pointer}
-.overlay-title{font-family:var(--ff-d);font-size:1.5rem;color:var(--white);margin-bottom:1.2rem}
-.overlay-body h3{font-family:var(--ff-d);font-size:.95rem;color:var(--gold-lt);margin:1rem 0 .3rem}
-.overlay-body p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:.4rem}
-.overlay-body a{color:var(--gold-lt)}
 
 /* ─── REVEAL ─────────────────────────────────────────────────── */
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -791,7 +784,7 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
             <textarea id="vorhaben" name="vorhaben" placeholder="Beschreiben Sie kurz Ihr Startup / Unternehmen und was Sie suchen…"></textarea>
           </div>
           <button type="submit" class="form-submit">Anfrage senden →</button>
-          <p class="privacy-note">Pflichtfelder *. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet (Art. 6 Abs. 1 lit. b DSGVO). Keine Weitergabe an Dritte. <a href="#" onclick="showPrivacy();return false" style="color:rgba(255,255,255,.35)">Datenschutz</a></p>
+          <p class="privacy-note">Pflichtfelder *. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet (Art. 6 Abs. 1 lit. b DSGVO). Keine Weitergabe an Dritte. <a href="/datenschutz/" style="color:rgba(255,255,255,.35)">Datenschutz</a></p>
         </form>
       </div>
     </div>
@@ -945,14 +938,13 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
       <ul>
         <li><a href="https://www.business-angel-invest.eu/impressum/">Impressum</a></li>
         <li><a href="https://www.business-angel-invest.eu/datenschutz/">Datenschutz</a></li>
-        <li><a href="https://www.business-angel-invest.eu/agb/">AGB</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    © 2026 Business-Angel-Invest.eu · Ein Angebot von PAN21 · Berlin ·
+    © 2026 Business-Angel-Invest.eu · Ein Angebot der PAN21.com International LLC ·
     <a href="https://www.business-angel-invest.eu/impressum/" style="color:inherit;text-decoration:none">Impressum</a> ·
     <a href="https://www.business-angel-invest.eu/datenschutz/" style="color:inherit;text-decoration:none">Datenschutz</a>
   </div>
@@ -962,29 +954,9 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,76,.1);padding:2
 <script src="https://pan21counter.de/c.js?id=PA006" async></script>
 </footer>
 
-<!-- Privacy Overlay -->
-<div class="overlay" id="privacyOverlay" onclick="if(event.target===this)hidePrivacy()">
-  <div class="overlay-box">
-    <button class="overlay-close" onclick="hidePrivacy()">✕</button>
-    <div class="overlay-title">Datenschutz</div>
-    <div class="overlay-body">
-      <h3>Verantwortlicher</h3>
-      <p>PAN21 · business-angel-invest.eu<br>E-Mail: <a href="mailto:angel@pan21.com">angel@pan21.com</a></p>
-      <h3>Kontaktformular</h3>
-      <p>Übermittelte Daten werden zur Bearbeitung gespeichert (Art. 6 Abs. 1 lit. b DSGVO). Keine Weitergabe an Dritte.</p>
-      <h3>Ihre Rechte</h3>
-      <p>Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerspruch (Art. 15–21 DSGVO). Kontakt: <a href="mailto:angel@pan21.com">angel@pan21.com</a></p>
-    </div>
-  </div>
-</div>
-
 <a href="#top" style="position:fixed;bottom:2rem;right:2rem;background:var(--gold);color:var(--navy);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;text-decoration:none;opacity:.75;transition:opacity .2s;z-index:50" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity='.75'">▲</a>
 
 <script>
-/* Privacy */
-function showPrivacy(){document.getElementById('privacyOverlay').classList.add('show');}
-function hidePrivacy(){document.getElementById('privacyOverlay').classList.remove('show');}
-
 /* Hamburger */
 document.querySelector('.hamburger').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('open');});
 
