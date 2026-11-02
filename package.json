@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "description": "business-angel-invest.eu – Business Angels & Privatgeld",
   "private": true,
-  "engines": { "node": ">=18.x" }
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "build": "node scripts/latest-articles.mjs html . index.html"
+  }
 }
